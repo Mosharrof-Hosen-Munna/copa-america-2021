@@ -1,0 +1,22 @@
+/* google fonts link start */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+/* google fonts link end */
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+/* common styles start */
+.container {
+  width: 1140px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+section {
+  padding: 50px 0px;
+}
+/* common styles end */
