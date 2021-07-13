@@ -18,7 +18,7 @@ common styles start
   margin: 0 auto;
 }
 section {
-  padding: 50px 0px;
+  padding: 60px 0px;
 }
 /* common button start */
 
@@ -75,4 +75,120 @@ header {
 
 /*----------------------------------------------------------------
  Header section styles end
+ -------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------- */
+
+/*----------------------------------------------------------------
+ Players section styles start
+ -------------------------------------------------------------- */
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.player-image img {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.single-player {
+  padding: 15px;
+}
+
+.player-info .player-name {
+  font-size: 28px;
+  margin: 10px 0px;
+  font-weight: 700;
+}
+
+.player-info .player-detail {
+  line-height: 26px;
+  margin: 10px 0px;
+}
+/*----------------------------------------------------------------
+ Players section styles end
+ -------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------- */
+
+/*----------------------------------------------------------------
+ Highlights section styles start
+ -------------------------------------------------------------- */
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highlights-details {
+  width: 50%;
+}
+
+.highlights-image {
+  width: 50%;
+}
+
+.highlights-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.highlights-details h1 {
+  font-size: 48px;
+}
+
+.highlights-details p {
+  width: 370px;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+/*----------------------------------------------------------------
+ Highlights section styles end
+ -------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------- */
+
+/*----------------------------------------------------------------
+ Footer section styles start
+ -------------------------------------------------------------- */
+
+.footer-logo {
+  width: 485px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.footer-logo img {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.social-icons i {
+  margin: 0px 14px;
+  border-radius: 50%;
+  padding: 15px;
+  color: #969bab;
+  background: #e7e7e8;
+}
+
+.copyright {
+  margin: auto;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #333;
+}
+
+/*----------------------------------------------------------------
+ Footer section styles end
  -------------------------------------------------------------- */
