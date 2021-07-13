@@ -2,15 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 /* google fonts link end */
 
-body,
-html {
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
 
-/* common styles start */
+/* ---------------------------------------------------------------
+common styles start
+--------------------------------------------------------------- */
 .container {
   width: 1140px;
   padding: 0px 15px;
@@ -19,4 +20,59 @@ html {
 section {
   padding: 50px 0px;
 }
-/* common styles end */
+/* common button start */
+
+.btn-watch {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  background: #e02c6d;
+  padding: 13px 24px;
+  border-radius: 4px;
+}
+.btn-watch i {
+  margin-left: 10px;
+}
+/* common button end */
+
+/* ---------------------------------------------------------------
+common styles end
+--------------------------------------------------------------- */
+
+/*----------------------------------------------------------------
+ Header section styles start
+ -------------------------------------------------------------- */
+
+header {
+  background-color: #2d25a0;
+  overflow: hidden;
+  padding: 40px 0px;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-info {
+  width: 50%;
+}
+
+.header-info h1 {
+  color: white;
+  width: 450px;
+  font-size: 64px;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+.header-thumnail img {
+  width: 100%;
+}
+
+.header-thumnail {
+  width: 50%;
+}
+
+/*----------------------------------------------------------------
+ Header section styles end
+ -------------------------------------------------------------- */
