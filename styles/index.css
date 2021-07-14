@@ -216,6 +216,7 @@ header {
 .player-info .player-detail {
   line-height: 26px;
   margin: 10px 0px;
+  text-align: justify;
 }
 /*----------------------------------------------------------------
  Players section styles end
@@ -386,6 +387,7 @@ Latest news section styles end
 .news-title h1 {
   font-size: 22px;
   margin: 12px 0;
+  text-align: justify;
 }
 
 .news-comment {
@@ -682,7 +684,7 @@ scrollbar design end
     font-size: 32px;
   }
   .match-timeline p {
-    font-size: 14px;
+    font-size: 10px;
   }
   .subscribe {
     padding: 100px 0px;
