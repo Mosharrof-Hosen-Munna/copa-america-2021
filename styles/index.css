@@ -149,18 +149,18 @@ header {
   margin-bottom: 27px;
   padding: 0px;
 }
+.header-thumnail {
+  width: 50%;
+}
 .header-thumnail img {
   width: 100%;
 }
 .header-thumnail img:hover {
-  /* animation: blackFire 5s ease-in-out 0s 2 normal normal; */
   animation: blackFire 5s ease-in-out 0s infinite normal;
   transition: 0.5s;
   animation-fill-mode: reverse;
 }
-.header-thumnail {
-  width: 50%;
-}
+
 @keyframes blackFire {
   0% {
     transform: scale(1);
@@ -169,7 +169,7 @@ header {
     transform: scale(0.8) rotate(90deg);
   }
   50% {
-    transform: scale(1.5) rotate(180deg);
+    transform: scale(1.4) rotate(180deg);
   }
   75% {
     transform: scale(0.7) rotate(270deg);
@@ -652,7 +652,7 @@ scrollbar design end
 
 @media (max-width: 500px) {
   a.scroll-up {
-    padding: 8px 12px;
+    padding: 8px 15px;
   }
   .header-info h1 {
     font-size: 40px;
@@ -680,6 +680,9 @@ scrollbar design end
 
   .match-section-header h1 {
     font-size: 32px;
+  }
+  .match-timeline p {
+    font-size: 14px;
   }
   .subscribe {
     padding: 100px 0px;
