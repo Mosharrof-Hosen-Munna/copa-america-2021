@@ -76,6 +76,18 @@ a.scroll-up {
   border-radius: 5px;
   text-decoration: none;
   color: white;
+  animation: scroll 2s ease 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0.05;
+  }
+  100% {
+    z-index: 2;
+    opacity: 1;
+  }
 }
 /* ---------------------------------------------------------------
 common styles end
@@ -185,13 +197,16 @@ header {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
+  transition: 0.5s;
 }
 .single-player {
   padding: 15px;
   border-radius: 4px;
   box-shadow: 0px 0px 14px #444;
 }
-
+.single-player:hover .player-image img {
+  transform: scale(1.05);
+}
 .player-info .player-name {
   font-size: 28px;
   margin: 10px 0px;
@@ -223,13 +238,19 @@ header {
 
 .highlights-image {
   width: 50%;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .highlights-image img {
   width: 100%;
   border-radius: 5px;
+  transition: 0.5s;
 }
-
+.highlights-image img:hover {
+  transform: scale(1.2);
+}
 .highlights-details h1 {
   font-size: 48px;
 }
@@ -346,6 +367,7 @@ Latest news section styles end
 
 .single-news {
   padding: 15px;
+  border: 0.5px solid #e1dbdb;
 }
 
 .news-image img {
