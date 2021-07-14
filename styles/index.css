@@ -6,6 +6,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Nunito", sans-serif;
 }
@@ -24,19 +27,56 @@ footer {
 
 /* common button start */
 
-.btn-watch {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  background: #e02c6d;
-  padding: 13px 24px;
-  border-radius: 4px;
-}
 .btn-watch i {
   margin-left: 10px;
 }
+.btn-watch {
+  padding: 15px 24px;
+  display: inline-block;
+  background-color: #e02c6d;
+  color: black;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+}
+.btn-watch::before {
+  transition: 0.4s ease-out;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 0px;
+  right: 0;
+  border-radius: 0 0 100% 100%;
+  background-color: rgb(0, 217, 255);
+}
+
+.btn-watch:hover::before {
+  border-radius: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
 /* common button end */
 
+a.scroll-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  padding: 16px 20px;
+  background: crimson;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
 /* ---------------------------------------------------------------
 common styles end
 --------------------------------------------------------------- */
@@ -44,11 +84,43 @@ common styles end
 /*----------------------------------------------------------------
  Header section styles start
  -------------------------------------------------------------- */
-
 header {
   background-color: #2d25a0;
   overflow: hidden;
 }
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.nav-links {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul li {
+  list-style: none;
+  margin: auto 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.login-btn {
+  padding: 15px 477px;
+  margin-bottom: 20px;
+}
+.navbar {
+  margin-bottom: 27px;
+  margin-top: 20px;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -68,11 +140,32 @@ header {
 .header-thumnail img {
   width: 100%;
 }
-
+.header-thumnail img:hover {
+  /* animation: blackFire 5s ease-in-out 0s 2 normal normal; */
+  animation: blackFire 5s ease-in-out 0s infinite normal;
+  transition: 0.5s;
+  animation-fill-mode: reverse;
+}
 .header-thumnail {
   width: 50%;
 }
-
+@keyframes blackFire {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8) rotate(90deg);
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+  }
+  75% {
+    transform: scale(0.7) rotate(270deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
 /*----------------------------------------------------------------
  Header section styles end
  -------------------------------------------------------------- */
@@ -95,6 +188,8 @@ header {
 }
 .single-player {
   padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 14px #444;
 }
 
 .player-info .player-name {
@@ -357,14 +452,17 @@ s  ubscribe styles end
 
 .social-icons i {
   font-size: 25px;
-
+  transition: 0.3s;
   margin: 0px 14px;
   border-radius: 50%;
   padding: 15px;
   color: #969bab;
   background: #e7e7e8;
 }
-
+.social-icons i:hover {
+  background-color: crimson;
+  color: white;
+}
 .copyright {
   margin: auto;
   text-align: center;
@@ -398,7 +496,7 @@ scrollbar design start
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: red;
+  background: rgb(0, 4, 255);
 }
 /*----------------------------------------------------------------
 scrollbar design end
@@ -449,6 +547,10 @@ scrollbar design end
   }
   .all-news {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .login-btn {
+    padding: 15px 294px;
+    margin-bottom: 18px;
   }
 }
 @media only screen and (max-width: 766px) {
@@ -521,9 +623,15 @@ scrollbar design end
   input.submit-btn {
     padding: 15px 7px;
   }
+  .login-btn {
+    padding: 15px 180px;
+  }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
+  a.scroll-up {
+    padding: 8px 12px;
+  }
   .header-info h1 {
     font-size: 40px;
   }
@@ -565,6 +673,17 @@ scrollbar design end
 
   input.submit-btn {
     padding: 12px 7px;
+  }
+  .nav-links li a {
+    padding: 15px 0px;
+    font-size: 14px;
+  }
+  .navbar ul {
+    flex-direction: column-reverse;
+  }
+  .login-btn {
+    padding: 15px 80px;
+    margin-bottom: 10px;
   }
 }
 /*------------------------------------------------------------- 
