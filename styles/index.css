@@ -1,14 +1,14 @@
 /* google fonts link start */
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 /* google fonts link end */
-
-body {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
   font-family: "Nunito", sans-serif;
 }
-
 /* ---------------------------------------------------------------
 common styles start
 --------------------------------------------------------------- */
@@ -17,9 +17,11 @@ common styles start
   padding: 0px 15px;
   margin: 0 auto;
 }
-section {
+section,
+footer {
   padding: 60px 0px;
 }
+
 /* common button start */
 
 .btn-watch {
@@ -46,7 +48,6 @@ common styles end
 header {
   background-color: #2d25a0;
   overflow: hidden;
-  padding: 40px 0px;
 }
 .header-content {
   display: flex;
@@ -59,10 +60,9 @@ header {
 
 .header-info h1 {
   color: white;
-  width: 450px;
   font-size: 64px;
   margin: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
   padding: 0px;
 }
 .header-thumnail img {
@@ -150,6 +150,188 @@ header {
  -------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------------------- */
+/*----------------------------------------------------------------
+ match-schudule-section section styles start
+ -------------------------------------------------------------- */
+.match-schudule-section {
+  background-image: url(../images/country-flag/match-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+}
+.match-section-header h1 {
+  text-align: center;
+  color: white;
+  font-size: 45px;
+  margin-bottom: 74px;
+}
+.schedule-heading {
+  color: white;
+}
+.all-schedule {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+}
+
+.next-match {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.single-match {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 30px 0px;
+  background: rgba(21, 22, 24, 0.9);
+  color: white;
+  padding: 25px 15px;
+}
+.match-timeline h2 {
+  margin: 10px;
+}
+.all-schedule img {
+  width: 50px;
+  height: 30px;
+  margin: 0px 14px;
+}
+
+.nation-flag {
+  display: flex;
+  align-items: center;
+}
+.nation-flag2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.match-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*----------------------------------------------------------------
+ match-schudule-section section styles end
+ -------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------- */
+
+/*----------------------------------------------------------------
+Latest news section styles end
+ -------------------------------------------------------------- */
+.latest-news-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.latest-news-header h2 {
+  color: crimson;
+}
+
+.latest-news-header h1 {
+  font-size: 45px;
+  position: relative;
+}
+
+.latest-news-header h1:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 4px;
+  background: crimson;
+  top: 66px;
+  left: 41%;
+}
+.all-news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.single-news {
+  padding: 15px;
+}
+
+.news-image img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.news-date span {
+  width: 8px;
+  height: 8px;
+  background: crimson;
+  display: inline-block;
+  margin-bottom: 1px;
+}
+
+.news-title h1 {
+  font-size: 22px;
+  margin: 12px 0;
+}
+
+.news-comment {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-comment p i {
+  margin-right: 10px;
+  color: crimson;
+}
+/*----------------------------------------------------------------
+ Latest news section styles end
+ -------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------- */
+
+/*----------------------------------------------------------------
+  subscribe styles start
+ -------------------------------------------------------------- */
+.subscribe {
+  background: url(../images/country-flag/subscribe-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 150px 0px;
+}
+section.subscribe h1 {
+  text-align: center;
+  font-size: 50px;
+  color: crimson;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+input.email-field {
+  padding: 24px 18px;
+  outline: none;
+  width: 50%;
+  border: none;
+  font-size: 18px;
+  border-radius: 4px;
+}
+input.submit-btn {
+  padding: 24px 20px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  margin-left: -10px;
+  background: crimson;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/*----------------------------------------------------------------
+s  ubscribe styles end
+ -------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
 
 /*----------------------------------------------------------------
  Footer section styles start
@@ -168,11 +350,13 @@ header {
 .social-icons {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0px;
   justify-content: center;
 }
 
 .social-icons i {
+  font-size: 25px;
+
   margin: 0px 14px;
   border-radius: 50%;
   padding: 15px;
@@ -192,3 +376,170 @@ header {
 /*----------------------------------------------------------------
  Footer section styles end
  -------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------- 
+---------------------------------Media styles----------------------------------------
+---------------------------------------------------------------------------------- */
+
+/*------------------------------------------------------------- 
+ responsive media start
+ ---------------------------------------------------------------- */
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .header-info h1 {
+    font-size: 50px;
+  }
+  .header-info {
+    width: 100%;
+  }
+
+  .header-thumnail {
+    width: 100%;
+    margin-top: 70px;
+  }
+  /* ------------player section resposive styles-------------- */
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* ------------highlights-section resposive styles-------------- */
+  .highlights {
+    flex-direction: column;
+  }
+  .highlights-details p {
+    width: 100%;
+  }
+  .highlights-details {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .highlights-image {
+    width: 100%;
+  }
+  .all-schedule {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .all-news {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 766px) {
+  /*------------------------common styles---------------- */
+  .container {
+    width: 100%;
+  }
+  /* ------------header resposive styles-------------- */
+  .header-content {
+    flex-direction: column;
+  }
+  .header-info h1 {
+    font-size: 50px;
+  }
+  .header-info {
+    width: 100%;
+  }
+
+  .header-thumnail {
+    width: 100%;
+    margin-top: 70px;
+  }
+  /* ------------player section resposive styles-------------- */
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* ------------highlights-section resposive styles-------------- */
+  .highlights {
+    flex-direction: column;
+  }
+  .highlights-details p {
+    width: 100%;
+  }
+  .highlights-details {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .highlights-image {
+    width: 100%;
+  }
+  /* ------------footer resposive styles-------------- */
+  .footer-logo {
+    width: 100%;
+  }
+
+  .all-schedule {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .latest-news-header h1 {
+    font-size: 30px;
+  }
+
+  .latest-news-header h1:after {
+    width: 150px;
+    top: 66px;
+    left: 30%;
+  }
+  .all-news {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.subscribe h1 {
+    font-size: 25px;
+  }
+
+  input.email-field {
+    padding: 15px 7px;
+    width: 67%;
+  }
+
+  input.submit-btn {
+    padding: 15px 7px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header-info h1 {
+    font-size: 40px;
+  }
+  .nation-flag {
+    flex-direction: column;
+    align-items: normal;
+    margin: auto 0;
+  }
+  .nation-flag img {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .nation-flag2 {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin: auto 0;
+  }
+
+  .nation-flag2 img {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  .match-section-header h1 {
+    font-size: 32px;
+  }
+  .subscribe {
+    padding: 100px 0px;
+  }
+  section.subscribe h1 {
+    font-size: 18px;
+  }
+
+  input.email-field {
+    padding: 12px 7px;
+    width: 67%;
+  }
+
+  input.submit-btn {
+    padding: 12px 7px;
+  }
+}
+/*------------------------------------------------------------- 
+ responsive media end
+ ---------------------------------------------------------------- */
